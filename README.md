@@ -1,4 +1,4 @@
-oxid-snippets
-=============
+trusted-shops-rich-snippets
+=========
 
-Snippets for OXID eShop
+Shows trusted shops information (rich snippets) on shop start page.
