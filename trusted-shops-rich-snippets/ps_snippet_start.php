@@ -8,9 +8,10 @@
         if($sTsId = $oViewConf->getTsId())
         {
             $aFeed = @simplexml_load_file("http://www.trustedshops.com/api/ratings/v1/".$sTsId.".xml");
-            $fRating = number_format($aFeed->ratings->result[1], 2, ",", "");
+            $dRating = (double)$aFeed->ratings->result[1];
+            $dFormRating = number_format($dRating, 2, ",", "");
             $iVotes = $aFeed->ratings->amount[0];
-            $aData = array("rating" => $fRating, "maxrating" => "5,00", "votes" => $iVotes);
+            $aData = array("rating" => $dFormRating, "maxrating" => "5,00", "votes" => $iVotes);
             return $aData;
             
         }
