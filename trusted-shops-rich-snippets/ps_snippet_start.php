@@ -10,9 +10,9 @@
             $sCacheFile = $this->getConfig()->getConfigParam( 'sCompileDir' ).'tsShops_'.$sTsId.'.xml';
             if (file_exists($sCacheFile))
             {
-                $now = time();
-                $then = filemtime($sCacheFile);
-                if ($now-$then > 60*60*24)
+                $sTimeNow = time();
+                $sTimeFile = filemtime($sCacheFile);
+                if ($sTimeNow - $sTimeFile > 60*60*24)
                 {
                     unlink($sCacheFile);
                 }
