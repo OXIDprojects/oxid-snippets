@@ -1,3 +1,4 @@
+<?
     /*
      * ts rich snippets
      * http://www.trustedshops.com/api/ratings/v1/documentation.html
